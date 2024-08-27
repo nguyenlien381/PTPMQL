@@ -24,6 +24,17 @@ public class HomeController : Controller
         ViewBag.hghh = strOutput;
         return View();
     }
+    public IActionResult Demo()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Demo(string FullName )
+    {
+        string strResult = "Hello" + FullName;
+        ViewBag.thongbao = strResult;
+        return View();
+    }
 
     public IActionResult Privacy()
     {
