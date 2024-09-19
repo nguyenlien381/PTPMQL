@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+</style>
+</head>
+<body>
+
+<p>2021050381_Nguyễn THị Liên</p>
+
+<p class="myclass">2021050381_Nguyễn THị Liên</p>
+
+<p id="myid">This is some text in a paragraph.</p>
+
+</body>
+</html>
