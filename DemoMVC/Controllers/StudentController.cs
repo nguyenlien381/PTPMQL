@@ -39,7 +39,5 @@ namespace DemoMVC.Controllers
             }
             return View(std);
         }
-
-        
     }
 }

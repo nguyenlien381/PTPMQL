@@ -86,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PTPMQL/DemoMVC/Views/Sinhvien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PTPMQL/DemoMVC/Views/Sinhvien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PTPMQL/DemoMVC/Views/Sinhvien/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
