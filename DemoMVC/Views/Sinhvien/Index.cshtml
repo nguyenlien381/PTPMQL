@@ -1,0 +1,47 @@
+@model IEnumerable<DemoMVC.Models.Sinhvien>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Thêm dữ liệu Sinh viên</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Masv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tensv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Daichi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Masv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tensv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Daichi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Masv">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Masv">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Masv">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
