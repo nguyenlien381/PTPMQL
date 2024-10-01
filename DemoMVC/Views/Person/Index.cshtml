@@ -1,11 +1,41 @@
-<h1>@ViewBag.fgjk</h1>
+@model IEnumerable<DemoMVC.Models.Person>
 
-<form asp-action ="Index">
-<label>PersonId:</label>
-<input name="PersonId" type="text">
-<label>Họ và tên:</label>
-<input name="FullName" type="text">
-<label>Địa chỉ:</label>
-<input name="Address" type="text">
-<input type="submit" value="Gửi dữ liệu">
-</form>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Họtên)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quêquán)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Họtên)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quêquán)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Căncướccôngdân">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Căncướccôngdân">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Căncướccôngdân">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

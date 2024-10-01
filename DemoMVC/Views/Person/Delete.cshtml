@@ -1,4 +1,4 @@
-@model DemoMVC.Models.Nguoi
+@model DemoMVC.Models.Person
 
 @{
     ViewData["Title"] = "Delete";
@@ -8,25 +8,25 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Nguoi</h4>
+    <h4>Person</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Họtên)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Họtên)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Addrest)
+            @Html.DisplayNameFor(model => model.Quêquán)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Addrest)
+            @Html.DisplayFor(model => model.Quêquán)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Căncướccôngdân" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

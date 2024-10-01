@@ -1,4 +1,4 @@
-@model DemoMVC.Models.Sinhvien
+@model DemoMVC.Models.Person
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,22 +6,22 @@
 
 <h1>Edit</h1>
 
-<h4>Sinhvien</h4>
+<h4>Person</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Masv" />
+            <input type="hidden" asp-for="Căncướccôngdân" />
             <div class="form-group">
-                <label asp-for="Tensv" class="control-label"></label>
-                <input asp-for="Tensv" class="form-control" />
-                <span asp-validation-for="Tensv" class="text-danger"></span>
+                <label asp-for="Họtên" class="control-label"></label>
+                <input asp-for="Họtên" class="form-control" />
+                <span asp-validation-for="Họtên" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Daichi" class="control-label"></label>
-                <input asp-for="Daichi" class="form-control" />
-                <span asp-validation-for="Daichi" class="text-danger"></span>
+                <label asp-for="Quêquán" class="control-label"></label>
+                <input asp-for="Quêquán" class="form-control" />
+                <span asp-validation-for="Quêquán" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

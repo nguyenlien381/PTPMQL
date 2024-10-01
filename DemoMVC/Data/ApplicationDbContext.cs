@@ -14,8 +14,8 @@ namespace DemoMVC.Data
         {
         }
 
-        public DbSet<Nguoi> Nguoi { get; set; } = default!;
-        public DbSet<Sinhvien> Sinhvien { get; set;} = default!;
+        
         public DbSet<Student> Students { get; set; } = default!;
+        public DbSet<DemoMVC.Models.Person> Person { get; set; } = default!;
     }
 }
