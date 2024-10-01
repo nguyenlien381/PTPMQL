@@ -10,5 +10,6 @@ namespace DemoMVC.Data
         {}
         public DbSet<Student> Student { get; set;}
         public DbSet<DemoMVC.Models.Person> Person { get; set; } = default!;
+        public DbSet<Employee> Employee { get; set;} = default!;
     }
 }
