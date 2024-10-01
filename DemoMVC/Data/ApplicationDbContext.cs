@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 using DemoMVC.Models;
 
@@ -9,13 +6,9 @@ namespace DemoMVC.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
-
-        
-        public DbSet<Student> Students { get; set; } = default!;
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {}
+        public DbSet<Student> Student { get; set;}
         public DbSet<DemoMVC.Models.Person> Person { get; set; } = default!;
     }
 }

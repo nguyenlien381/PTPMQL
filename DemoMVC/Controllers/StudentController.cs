@@ -21,7 +21,7 @@ namespace DemoMVC.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Students.ToListAsync());
+            return View(await _context.Student.ToListAsync());
         }
         public IActionResult Create()
         {

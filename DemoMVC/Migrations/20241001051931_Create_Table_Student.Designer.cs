@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240924042148_Create_table_Student")]
-    partial class Create_table_Student
+    [Migration("20241001051931_Create_Table_Student")]
+    partial class Create_Table_Student
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,39 +19,22 @@ namespace DemoMVC.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("DemoMVC.Models.Nguoi", b =>
+            modelBuilder.Entity("DemoMVC.Models.Person", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<string>("CCCD")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Addrest")
+                    b.Property<string>("Hoten")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Nguoi");
-                });
-
-            modelBuilder.Entity("DemoMVC.Models.Sinhvien", b =>
-                {
-                    b.Property<string>("Masv")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Daichi")
+                    b.Property<string>("Quequan")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Tensv")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.HasKey("CCCD");
 
-                    b.HasKey("Masv");
-
-                    b.ToTable("Sinhvien");
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("DemoMVC.Models.Student", b =>
@@ -60,12 +43,11 @@ namespace DemoMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("StudentId");
 
-                    b.ToTable("Students");
+                    b.ToTable("Student");
                 });
 #pragma warning restore 612, 618
         }

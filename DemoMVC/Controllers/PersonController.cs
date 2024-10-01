@@ -34,7 +34,7 @@ namespace DemoMVC.Controllers
             }
 
             var person = await _context.Person
-                .FirstOrDefaultAsync(m => m.Căncướccôngdân == id);
+                .FirstOrDefaultAsync(m => m.CCCD == id);
             if (person == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace DemoMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Căncướccôngdân,Họtên,Quêquán")] Person person)
+        public async Task<IActionResult> Create([Bind("CCCD,Hoten,Quequan")] Person person)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +86,9 @@ namespace DemoMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Căncướccôngdân,Họtên,Quêquán")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("CCCD,Hoten,Quequan")] Person person)
         {
-            if (id != person.Căncướccôngdân)
+            if (id != person.CCCD)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace DemoMVC.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.Căncướccôngdân))
+                    if (!PersonExists(person.CCCD))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace DemoMVC.Controllers
             }
 
             var person = await _context.Person
-                .FirstOrDefaultAsync(m => m.Căncướccôngdân == id);
+                .FirstOrDefaultAsync(m => m.CCCD == id);
             if (person == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace DemoMVC.Controllers
 
         private bool PersonExists(string id)
         {
-            return _context.Person.Any(e => e.Căncướccôngdân == id);
+            return _context.Person.Any(e => e.CCCD == id);
         }
     }
 }
